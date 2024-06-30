@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    background: url('https://t4.ftcdn.net/jpg/02/70/42/37/360_F_270423771_TxmLjpgE4dCaxRXaBeHkIpL8QMUKrF2B.jpg') no-repeat fixed;
+    background-size: cover;
+    color: #333333;
+}
+
+h1 {
+    padding: 15px;
+    font-family: "Jaini Purva", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7rem;
+    color: #ff5722; /* Vibrant orange color for the title */
+}
+
+.stopwatch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height: 420px;
+    margin: auto;
+    border-radius: 50%;
+    background: url('stopwatch.png') no-repeat center center;
+    background-size: cover;
+}
+
+p {
+    margin-top: 12%;
+    font-size: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px;
+    padding: 10px;
+    color: #ff2222;
+    font-weight: bolder;
+}
+
+button {
+    margin: 30px 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff5722; /* Vibrant orange color for buttons */
+    color: white; /* White text color for contrast */
+}
+
+button:hover {
+    background-color: #e64a19; /* Slightly darker shade of orange on hover */
+}
