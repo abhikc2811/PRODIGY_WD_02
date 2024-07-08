@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stopwatch</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Jaini+Purva&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Stopwatch</h1>
-    <div class="stopwatch">
-        <p id="display">00:00:00.000</p>
+    <div id="container">
+        <div>
+            <h1>Stopwatch</h1>
+            <div class="stopwatch">
+                <p id="display">00:00:00.000</p>
+            </div>
+            <button id="startStopBtn" onclick="startStop()">Start</button>
+            <button id="lapBtn" onclick="recordLap()">Lap</button>
+            <button id="resetBtn" onclick="reset()">Reset</button>
+        </div>
+        <div id="laps"></div>
     </div>
-    <button id="startStopBtn" onclick="startStop()">Start</button>
-    <button id="resetBtn" onclick="reset()">Reset</button>
     <script src="script.js"></script>
 </body>
 </html>
