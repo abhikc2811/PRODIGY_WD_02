@@ -3,6 +3,7 @@ let updatedTime;
 let difference;
 let tInterval;
 let running = false;
+let lapCounter = 0;
 
 function startStop() {
     if (!running) {
@@ -22,6 +23,9 @@ function reset() {
     running = false;
     document.getElementById("display").innerHTML = "00:00:00.000";
     document.getElementById("startStopBtn").innerHTML = "Start";
+    document.getElementById("laps").innerHTML = "";
+    lapCounter = 0;
+    document.getElementById("container").removeAttribute("data-laps");
 }
 
 function getShowTime() {
@@ -39,4 +43,20 @@ function getShowTime() {
     milliseconds = (milliseconds < 10) ? "00" + milliseconds : (milliseconds < 100) ? "0" + milliseconds : milliseconds;
 
     document.getElementById("display").innerHTML = hours + ":" + minutes + ":" + seconds + "." + milliseconds;
+}
+
+function recordLap() {
+    if (running) {
+        lapCounter++;
+        const lapTime = document.getElementById("display").innerHTML;
+        const lapDiv = document.createElement("div");
+        lapDiv.className = "lap";
+        lapDiv.innerHTML = `Lap ${lapCounter}: ${lapTime}`;
+        document.getElementById("laps").appendChild(lapDiv);
+        
+        // Change grid-template-columns to 2fr 1fr on the first lap
+        if (lapCounter === 1) {
+            document.getElementById("container").setAttribute("data-laps", "true");
+        }
+    }
 }
