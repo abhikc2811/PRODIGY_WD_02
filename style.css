@@ -10,6 +10,11 @@ body {
     color: #333333;
 }
 
+#container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
 h1 {
     padding: 15px;
     font-family: "Jaini Purva", system-ui;
@@ -54,4 +59,22 @@ button {
 
 button:hover {
     background-color: #e64a19; /* Slightly darker shade of orange on hover */
+}
+
+.lap {
+    font-size: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px auto;
+    width: fit-content;
+    color: #ff5722; 
+    font-weight: bolder;
+    font-family: "Jaini Purva", system-ui;
+}
+
+@media (min-width: 768px) {
+    #container[data-laps="true"] {
+        grid-template-columns: 2fr 1fr;
+    }
 }
